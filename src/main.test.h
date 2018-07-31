@@ -5,6 +5,7 @@
 
 TEST test_args(void)
 {
+
     PASS();
 }
 
