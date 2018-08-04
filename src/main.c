@@ -19,14 +19,9 @@ typedef struct bin_data
     char *bin_path;
 } bin_data;
 
-void print_help()
+void print_help(FILE *fp)
 {
-    printf("Usage\n"
-           "-a [bin file]  | start managing bin file\n"
-           "-d [bin name]  | stop managing bin file\n"
-           "-u [bin names] | update managed bin from bin's location\n"
-           "-g             | get list of all managed bin files\n"
-           "-h             | show this menu\n");
+    fprintf(fp, HELP_STRING);
 }
 
 flag flags[] = {
@@ -55,7 +50,17 @@ int main(int argc, char **argv)
     // loop through all flag structs to see what opts to do
     for (int i = 0; i < flags_len; i++)
     {
-        print_flag(stdout, flags[i]);
+        if (flags[i].flagged)
+        {
+            switch (flags[i].flag_char)
+            {
+            case 'a':
+
+                break;
+            }
+        }
+
+        //print_flag(stdout, flags[i]);
     }
 
     return 0;

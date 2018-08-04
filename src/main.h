@@ -3,8 +3,15 @@
 
 #include "flags.h"
 
+#define HELP_STRING "Usage\n"                                                   \
+                    "-a [bin file]  | start managing bin file\n"                \
+                    "-d [bin name]  | stop managing bin file\n"                 \
+                    "-u [bin names] | update managed bin from bin's location\n" \
+                    "-g             | get list of all managed bin files\n"      \
+                    "-h             | show this menu\n"
+
 extern flag flags[];
-void print_help();
+void print_help(FILE *fp);
 
 #define GETOPT_STR "a:d:u:gh"
 
