@@ -5,7 +5,7 @@
 #include <unistd.h>
 #define BUFFERS_IMPLEMENTATION
 #include <buffers.h>
-#include <bits/getopt_core.h>
+#include <getopt.h>
 #include "greatest/greatest.h"
 
 #include "flags.h"
