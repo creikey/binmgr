@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Ilib/
+CFLAGS = -Wall -Ilib/ -std=c99
 
 .PHONY: all clean debug
 
