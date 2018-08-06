@@ -22,17 +22,6 @@ void print_help(FILE *fp)
     fprintf(fp, HELP_STRING);
 }
 
-/**
- * @brief flags to check for
- * 
- */
-flag flags[] = {
-    new_flag('a', true),
-    new_flag('d', true),
-    new_flag('u', true),
-    new_flag('g', false),
-    new_flag('h', false)};
-
 GREATEST_MAIN_DEFS();
 
 int main(int argc, char **argv)
@@ -43,6 +32,12 @@ int main(int argc, char **argv)
     RUN_ALL_SUITS();
     GREATEST_MAIN_END();
 #else
+    flag flags[] = {
+        new_flag('a', true),
+        new_flag('d', true),
+        new_flag('u', true),
+        new_flag('g', false),
+        new_flag('h', false)};
     // check for config folder environment variable
     char *binmgr_folder = getenv(BINMGR_FOLDER);
     if (binmgr_folder == NULL)

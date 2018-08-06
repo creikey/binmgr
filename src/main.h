@@ -10,12 +10,11 @@
                     "-g             | get list of all managed bin files\n"      \
                     "-h             | show this menu\n"
 
-#define NO_ENV_ERROR "BINMGR_FOLDER environment variable not detected." \
+#define NO_ENV_ERROR "BINMGR_FOLDER environment variable not detected\n" \
                      "Use install.sh to initialize\n"
 
 #define BINMGR_FOLDER "BINMGR_FOLDER"
 
-extern flag flags[];
 void print_help(FILE *fp);
 
 #define GETOPT_STR "a:d:u:gh"
