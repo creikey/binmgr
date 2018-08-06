@@ -13,11 +13,14 @@ $(BUILDDIR)/%.o : %.c
 	gcc -c $(CFLAGS) $< -o $@
 
 #all: fix-main $(OBJS) $(HEADERS)
-all: $(OBJS) $(HEADERS)
+all: fix-builddir $(OBJS) $(HEADERS)
 	gcc $(OBJS) $(CFLAGS) -o $(EXNAME)
 
 #fix-main:
 #	-rm -f $(BUILDDIR)/main.o
+
+fix-builddir:
+	mkdir -p $(BUILDDIR)
 
 clean:
 	-rm -f $(BUILDDIR)/*.o
