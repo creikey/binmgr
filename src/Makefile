@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Ilib/greatest/
+CFLAGS = -Wall -Ilib/
 
 .PHONY: all clean debug
 
