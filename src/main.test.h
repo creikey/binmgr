@@ -1,7 +1,7 @@
 #ifndef H_MAIN_TEST
 #define H_MAIN_TEST
 
-#include "greatest.h"
+#include "greatest/greatest.h"
 
 TEST test_args(void)
 {
