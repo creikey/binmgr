@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <unistd.h>
-#include <bits/getopt_core.h>
+#include <getopt.h>
+// #include <bits/getopt_core.h>
 #define FLAGS_MAIN_FILE
 #include "flags.h"
 
