@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "buffers.h": "c",
-        "unistd.h": "c",
-        "stdlib.h": "c",
-        "array": "c"
-    }
-}
