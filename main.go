@@ -32,7 +32,7 @@ func onRepair(args []string) int {
 		log.Println(err.Error())
 		return 1
 	}
-	err := curConfig.RepairBins()
+	err = curConfig.RepairBins()
 	if err != nil {
 		log.Println(err.Error())
 		return 1

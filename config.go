@@ -76,13 +76,18 @@ func (c *Config) RepairBins() error {
 	return nil
 }
 
-// ParseConfig parses the config's path, populating Bins
-func (c *Config) ParseConfig() error {
+// SetPaths sets all paths and checks them
+func (c *Config) SetPaths() error {
 	var err error
 	c.Path, err = getConfigPath()
 	if err != nil {
 		return err
 	}
+	return nil
+}
+
+// ParseConfig parses the config's path, populating Bins
+func (c *Config) ParseConfig() error {
 	configFile, err := os.Open(c.Path)
 	if err != nil {
 		return err
