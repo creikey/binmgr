@@ -1,2 +1,3 @@
 language: go
+install: make depends
 script: make test
